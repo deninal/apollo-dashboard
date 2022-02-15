@@ -264,7 +264,7 @@ const ThemeSettings = () => {
           }}
         >
           <Box p={2}>
-            <Typography
+            {/* <Typography
               sx={{
                 mb: 2,
                 textAlign: 'center',
@@ -274,8 +274,8 @@ const ThemeSettings = () => {
               variant="body1"
             >
               Theme Configurator
-            </Typography>
-            <Button
+            </Typography> */}
+            {/* <Button
               fullWidth
               size="large"
               variant="outlined"
@@ -364,7 +364,7 @@ const ThemeSettings = () => {
               >
                 Top Navigation
               </MenuItem>
-            </Menu>
+            </Menu> */}
           </Box>
           <Divider />
           <ThemeToggleWrapper>
@@ -418,7 +418,7 @@ const ThemeSettings = () => {
                 </ButtonWrapper>
               </Tooltip>
 
-              <Tooltip placement="left" title="Grey Goose" arrow>
+              <Tooltip placement="left" title="Light 2" arrow>
                 <ButtonWrapper
                   className={theme === 'GreyGooseTheme' ? 'active' : ''}
                   onClick={() => {
@@ -436,7 +436,7 @@ const ThemeSettings = () => {
                 </ButtonWrapper>
               </Tooltip>
 
-              <Tooltip placement="left" title="Purple Flow" arrow>
+              <Tooltip placement="left" title="Light 3" arrow>
                 <ButtonWrapper
                   className={theme === 'PurpleFlowTheme' ? 'active' : ''}
                   onClick={() => {
