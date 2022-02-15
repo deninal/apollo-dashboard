@@ -1,0 +1,44 @@
+import { styled } from '@mui/material/styles';
+import { Box } from '@mui/material';
+import { Outlet } from 'react-router-dom';
+import ThemeSettings from 'src/components/ThemeSettings';
+import Sidebar from './Sidebar';
+import Header from './Header';
+
+
+const MainWrapper = styled(Box)(
+  ({ theme }) => `
+        flex: 1 1 auto;
+        display: flex;
+        height: 100%;
+        
+        @media (min-width: ${theme.breakpoints.values.lg}px) {
+            padding-left: ${theme.sidebar.width};
+        }
+`
+);
+
+const MainContent = styled(Box)(
+  ({ theme }) => `
+        margin-top: ${theme.header.height};
+        flex: 1 1 auto;
+        overflow: auto;
+`
+);
+
+const SidebarLayout = () => {
+  return (
+    <>
+      <Sidebar />
+      <MainWrapper>
+        <Header />
+        <MainContent>
+          <Outlet />
+          <ThemeSettings />
+        </MainContent>
+      </MainWrapper>
+    </>
+  );
+};
+
+export default SidebarLayout;
