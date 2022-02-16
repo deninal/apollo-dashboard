@@ -162,7 +162,7 @@ function HeaderUserbox() {
               handleClose();
             }}
             button
-            to={`/${location.pathname.split('/')[1]}/management/users/single/1`}
+            to="/management/profile/settings"
             component={NavLink}
           >
             <AccountBoxTwoToneIcon fontSize="small" />
