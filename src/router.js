@@ -61,6 +61,9 @@ const Tooltips = Loader(
 const Avatars = Loader(
   lazy(() => import('src/content/pages/Components/Avatars'))
 );
+const Charts = Loader(
+  lazy(() => import('src/content/pages/Components/Charts'))
+);
 const Cards = Loader(lazy(() => import('src/content/pages/Components/Cards')));
 const Forms = Loader(lazy(() => import('src/content/pages/Components/Forms')));
 
@@ -244,6 +247,10 @@ const routes = [
       {
         path: 'forms',
         element: <Forms />
+      },
+      {
+        path: 'charts',
+        element: <Charts />
       }
     ]
   }

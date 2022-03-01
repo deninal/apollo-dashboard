@@ -1,6 +1,8 @@
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, Typography, Card } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
+import VisibilityTwoToneIcon from '@mui/icons-material/VisibilityTwoTone';
+import ArrowForwardTwoToneIcon from '@mui/icons-material/ArrowForwardTwoTone';
 
 const TypographyH1 = styled(Typography)(
   ({ theme }) => `
@@ -11,20 +13,6 @@ const TypographyH1 = styled(Typography)(
 const TypographyH2 = styled(Typography)(
   ({ theme }) => `
     font-size: ${theme.typography.pxToRem(17)};
-`
-);
-
-const LabelWrapper = styled(Box)(
-  ({ theme }) => `
-    background-color: ${theme.colors.success.main};
-    color: ${theme.palette.success.contrastText};
-    font-weight: bold;
-    border-radius: 30px;
-    text-transform: uppercase;
-    display: inline-block;
-    font-size: ${theme.typography.pxToRem(11)};
-    padding: ${theme.spacing(0.5)} ${theme.spacing(1.5)};
-    margin-bottom: ${theme.spacing(2)};
 `
 );
 
@@ -48,25 +36,25 @@ const MuiAvatar = styled(Box)(
 `
 );
 
-const JsAvatar = styled(Box)(
-  ({ theme }) => `
-    width: ${theme.spacing(8)};
-    height: ${theme.spacing(8)};
-    border-radius: ${theme.general.borderRadius};
-    background-color: #ffffff;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto ${theme.spacing(2)};
+// const JsAvatar = styled(Box)(
+//   ({ theme }) => `
+//     width: ${theme.spacing(8)};
+//     height: ${theme.spacing(8)};
+//     border-radius: ${theme.general.borderRadius};
+//     background-color: #ffffff;
+//     flex-shrink: 0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin: 0 auto ${theme.spacing(2)};
 
-    img {
-      width: 60%;
-      height: 60%;
-      display: block;
-    }
-`
-);
+//     img {
+//       width: 60%;
+//       height: 60%;
+//       display: block;
+//     }
+// `
+// );
 
 function Hero() {
   return (
@@ -97,21 +85,21 @@ function Hero() {
             size="large"
             variant="contained"
           >
-            Preview
+            <VisibilityTwoToneIcon
+              sx={{
+                mr: 1
+              }}
+            />
+            Preview Demo
+            <ArrowForwardTwoToneIcon
+              sx={{
+                ml: 1
+              }}
+            />
           </Button>
-          <Button
-            sx={{ ml: 2 }}
-            component="a"
-            target="_blank"
-            rel="noopener"
-            href="#"
-            size="large"
-            variant="text"
-          >
-            Features
-          </Button>
-          <Grid container spacing={3} mt={5}>
-            <Grid item md={4}>
+
+          <Grid container justifyContent="center" spacing={1} mt={5}>
+            <Grid item>
               <MuiAvatar>
                 <img
                   src="/static/images/logo/material-ui.svg"
@@ -124,21 +112,36 @@ function Hero() {
                 </Box>
               </Typography> */}
             </Grid>
-            <Grid item md={4}>
-              <JsAvatar>
+            <Grid item>
+              <MuiAvatar>
                 <img
                   src="/static/images/logo/javascript.svg"
                   alt="javascript"
                 />
-              </JsAvatar>
+              </MuiAvatar>
             </Grid>
-            <Grid item md={4}>
-              <JsAvatar>
+            <Grid item>
+              <MuiAvatar>
+                <img src="/static/images/logo/react.png" alt="javascript" />
+              </MuiAvatar>
+            </Grid>
+            <Grid item>
+              <MuiAvatar>
+                <img src="/static/images/logo/router.png" alt="react-router" />
+              </MuiAvatar>
+            </Grid>
+            <Grid item>
+              <MuiAvatar>
+                <img src="/static/images/logo/apex.png" alt="apex-charts" />
+              </MuiAvatar>
+            </Grid>
+            <Grid item>
+              <MuiAvatar>
                 <img
-                  src="/static/images/logo/react.png"
-                  alt="javascript"
+                  src="/static/images/logo/styled.png"
+                  alt="styled-components"
                 />
-              </JsAvatar>
+              </MuiAvatar>
             </Grid>
           </Grid>
         </Grid>

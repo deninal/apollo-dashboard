@@ -6,6 +6,7 @@ import '@mui/lab/themeAugmentation';
 const themeColors = {
   primary: '#3E64FF',
   primaryAlt: '#1E2745',
+  bgAlt: '#1E2745',
   secondary: '#5A6583',
   success: '#57CA22',
   warning: '#FFA319',
@@ -101,7 +102,8 @@ const colors = {
       50: alpha(themeColors.primaryAlt, 0.5),
       70: alpha(themeColors.primaryAlt, 0.7),
       100: themeColors.primaryAlt
-    }
+    },
+  
   },
   secondary: {
     lighter: lighten(themeColors.secondary, 0.85),
@@ -193,7 +195,15 @@ export const DarkTheme = createTheme({
         50: alpha(themeColors.black, 0.5),
         70: alpha(themeColors.black, 0.7),
         100: themeColors.black
-      }
+      },
+      bgAlt: {
+        5: alpha(themeColors.primaryAlt, 0.02),
+        10: alpha(themeColors.primaryAlt, 0.1),
+        30: alpha(themeColors.primaryAlt, 0.3),
+        50: alpha(themeColors.primaryAlt, 0.5),
+        70: alpha(themeColors.primaryAlt, 0.7),
+        100: themeColors.primaryAlt
+      },
     },
     secondary: {
       lighter: alpha(themeColors.secondary, 0.1),

@@ -10,7 +10,8 @@ const themeColors = {
   info: '#33C2FF',
   black: '#223354',
   white: '#ffffff',
-  primaryAlt: '#000C57'
+  primaryAlt: '#000C57',
+  bgAlt: '#ffffff'
 };
 
 const colors = {
@@ -49,7 +50,7 @@ const colors = {
     sidebar: {
       background: themeColors.white,
       textColor: themeColors.secondary,
-      dividerBg: '#f2f5f9',
+      dividerBg: '#E0E0E0',
       menuItemColor: '#242E6F',
       menuItemColorActive: themeColors.primary,
       menuItemBg: 'transparent',
@@ -83,6 +84,14 @@ const colors = {
       50: alpha(themeColors.black, 0.5),
       70: alpha(themeColors.black, 0.7),
       100: themeColors.black
+    },
+    primaryAlt: {
+      5: alpha(themeColors.primaryAlt, 0.02),
+      10: alpha(themeColors.primaryAlt, 0.1),
+      30: alpha(themeColors.primaryAlt, 0.3),
+      50: alpha(themeColors.primaryAlt, 0.5),
+      70: alpha(themeColors.primaryAlt, 0.7),
+      100: themeColors.primaryAlt
     }
   },
   secondary: {
@@ -168,6 +177,14 @@ export const LightTheme1 = createTheme({
         50: alpha(themeColors.black, 0.5),
         70: alpha(themeColors.black, 0.7),
         100: themeColors.black
+      },
+      bgAlt: {
+        5: alpha(themeColors.white, 0.02),
+        10: alpha(themeColors.white, 0.1),
+        30: alpha(themeColors.white, 0.3),
+        50: alpha(themeColors.white, 0.5),
+        70: alpha(themeColors.white, 0.7),
+        100: themeColors.white
       }
     },
     secondary: {
@@ -350,6 +367,7 @@ export const LightTheme1 = createTheme({
         }
       }
     },
+
     MuiCssBaseline: {
       styleOverrides: {
         'html, body, #root': {
@@ -774,6 +792,7 @@ export const LightTheme1 = createTheme({
         }
       }
     },
+
     MuiMenu: {
       styleOverrides: {
         paper: {

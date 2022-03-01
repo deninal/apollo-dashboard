@@ -51,7 +51,7 @@ function AccountBalance() {
         <Grid item xs={12} md={6}>
           <Box p={4}>
             <Typography sx={{ pb: 3 }} variant="h4">
-              Your Portfolio Balance
+              My Portfolio Balance
             </Typography>
             <Box>
               <Typography variant="h1" gutterBottom>
@@ -97,7 +97,7 @@ function AccountBalance() {
 
           <Box p={4} flex={1}>
             <Typography sx={{ pb: 3 }} variant="h4">
-              Your Portfolio Distribution
+              My Portfolio Distribution
             </Typography>
             <Grid container spacing={0}>
               <Grid

@@ -1,34 +1,34 @@
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import BallotTwoToneIcon from '@mui/icons-material/BallotTwoTone';
 import VerifiedUserTwoToneIcon from '@mui/icons-material/VerifiedUserTwoTone';
-import ExtensionTwoToneIcon from '@mui/icons-material/ExtensionTwoTone';
 import ArticleTwoToneIcon from '@mui/icons-material/ArticleTwoTone';
 import ForumTwoToneIcon from '@mui/icons-material/ForumTwoTone';
 import MonetizationOnTwoToneIcon from '@mui/icons-material/MonetizationOnTwoTone';
 import PaymentsTwoToneIcon from '@mui/icons-material/PaymentsTwoTone';
 import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
 import BarChartIcon from '@mui/icons-material/BarChart';
+import PieChartTwoToneIcon from '@mui/icons-material/PieChartTwoTone';
+import ViewInArTwoToneIcon from '@mui/icons-material/ViewInArTwoTone';
 
 const menuItems = [
   {
     heading: 'General',
     items: [
       {
-        name: 'Crypto',
-        link: '/dashboards/crypto',
-        icon: MonetizationOnTwoToneIcon,
-      },
-      {
         name: 'Analytics',
         link: '/dashboards/analytics',
-        icon: BarChartIcon,
+        icon: BarChartIcon
+      },
+      {
+        name: 'Crypto',
+        link: '/dashboards/crypto',
+        icon: MonetizationOnTwoToneIcon
       },
       {
         name: 'Chat',
         icon: ForumTwoToneIcon,
         link: '/dashboards/messenger'
-      },
-      
+      }
     ]
   },
   {
@@ -42,17 +42,7 @@ const menuItems = [
       {
         name: 'User',
         icon: AccountCircleTwoToneIcon,
-        link: '/management/profile/settings',
-        // items: [
-        //   {
-        //     name: 'Profile Details',
-        //     link: '/management/profile/details'
-        //   },
-        //   {
-        //     name: 'User Settings',
-        //     link: '/management/profile/settings'
-        //   }
-        // ]
+        link: '/management/profile/settings'
       }
     ]
   },
@@ -61,29 +51,12 @@ const menuItems = [
     items: [
       {
         name: 'Base',
-        icon: ExtensionTwoToneIcon,
+        icon: ViewInArTwoToneIcon,
         link: '/components/base',
         items: [
           {
             name: 'Accordions',
             link: '/components/accordions'
-          },
-          {
-            name: 'Cards',
-            link: '/components/cards'
-          },
-          {
-            name: 'Tooltips',
-            link: '/components/tooltips'
-          },
-          {
-            name: 'Modals',
-            link: '/components/modals'
-          },
-
-          {
-            name: 'Tabs',
-            link: '/components/tabs'
           },
           {
             name: 'Avatars',
@@ -92,13 +65,33 @@ const menuItems = [
           {
             name: 'Badges',
             link: '/components/badges'
+          },
+          {
+            name: 'Buttons',
+            link: '/components/buttons'
+          },
+          {
+            name: 'Cards',
+            link: '/components/cards'
+          },
+          {
+            name: 'Modals',
+            link: '/components/modals'
+          },
+          {
+            name: 'Tabs',
+            link: '/components/tabs'
+          },
+          {
+            name: 'Tooltips',
+            link: '/components/tooltips'
           }
         ]
       },
       {
-        name: 'Buttons',
-        icon: BallotTwoToneIcon,
-        link: '/components/buttons'
+        name: 'Charts',
+        icon: PieChartTwoToneIcon,
+        link: '/components/charts'
       },
 
       {
@@ -108,16 +101,7 @@ const menuItems = [
       }
     ]
   },
-  {
-    heading: 'Other',
-    items: [
-      {
-        name: 'Overview',
-        link: '/overview',
-        icon: HomeTwoToneIcon,
-      }
-    ]
-  },
+
   {
     heading: 'Extra Pages',
     items: [
@@ -143,6 +127,16 @@ const menuItems = [
             link: '/status/coming-soon'
           }
         ]
+      }
+    ]
+  },
+  {
+    heading: 'Other',
+    items: [
+      {
+        name: 'Overview',
+        link: '/overview',
+        icon: HomeTwoToneIcon
       }
     ]
   }

@@ -1,94 +1,71 @@
-import { useEffect, useRef } from 'react';
-
 import { Helmet } from 'react-helmet-async';
+import { Box, styled, Divider } from '@mui/material';
+import Scrollbar from 'src/components/Scrollbar';
 
 import TopBarContent from './TopBarContent';
 import BottomBarContent from './BottomBarContent';
 import SidebarContent from './SidebarContent';
 import ChatContent from './ChatContent';
 
-import { Scrollbars } from 'react-custom-scrollbars-2';
-
-import { Box } from '@mui/material';
-import { styled } from '@mui/material/styles';
-
 const RootWrapper = styled(Box)(
-  () => `
-       height: 100%;
+  ({ theme }) => `
+       height: calc(100vh - ${theme.header.height});
        display: flex;
+       
 `
 );
 
 const Sidebar = styled(Box)(
   ({ theme }) => `
         width: 300px;
-        // background: ${theme.colors.alpha.black[100]};
-        border-right: ${theme.colors.secondary.lighter} solid 2px;
+        background: ${theme.colors.alpha.bgAlt[100]};
+        border-right: ${theme.sidebar.dividerBg} solid 1px;
 `
 );
 
 const ChatWindow = styled(Box)(
-  () => `
+  ({theme}) => `
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         flex: 1;
+        background: ${theme.colors.alpha.bgAlt[100]};
+        
 `
 );
 
 const ChatTopBar = styled(Box)(
   ({ theme }) => `
-       // background: ${theme.colors.alpha.black[100]};
-        border-bottom: ${theme.colors.secondary.lighter} solid 2px;
-        padding: ${theme.spacing(3)};
-`
-);
-
-const ChatMain = styled(Box)(
-  () => `
-        flex: 1;
-`
-);
-
-const ChatBottomBar = styled(Box)(
-  ({ theme }) => `
-        padding: ${theme.spacing(3)};
+        background: ${theme.colors.alpha.bgAlt[100]};
+        border-bottom: ${theme.colors.alpha.black[10]} solid 1px;
+        padding: ${theme.spacing(2)};
 `
 );
 
 function ApplicationsMessenger() {
-  const ref = useRef(null);
-
-  useEffect(() => {
-    if (ref.current) {
-      ref.current.scrollToBottom();
-    }
-  });
-
   return (
     <>
       <Helmet>
-        <title>Chat - Applications</title>
+        <title>Messenger - Applications</title>
       </Helmet>
-      <RootWrapper>
+      <RootWrapper className="Mui-FixedWrapper">
         <Sidebar>
-          <Scrollbars autoHide>
+          <Scrollbar>
             <SidebarContent />
-          </Scrollbars>
+          </Scrollbar>
         </Sidebar>
         <ChatWindow>
           <ChatTopBar>
             <TopBarContent />
           </ChatTopBar>
-          <ChatMain>
-            <Scrollbars ref={ref} autoHide>
+          <Box flex={1}>
+            <Scrollbar>
               <ChatContent />
-            </Scrollbars>
-          </ChatMain>
-          <ChatBottomBar>
-            <BottomBarContent />
-          </ChatBottomBar>
+            </Scrollbar>
+          </Box>
+          <Divider />
+          <BottomBarContent />
         </ChatWindow>
       </RootWrapper>
     </>

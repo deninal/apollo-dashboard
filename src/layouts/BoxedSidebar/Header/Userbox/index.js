@@ -15,15 +15,17 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import InboxTwoToneIcon from '@mui/icons-material/InboxTwoTone';
-import ExpandMoreTwoToneIcon from '@mui/icons-material/ExpandMoreTwoTone';
 import AccountBoxTwoToneIcon from '@mui/icons-material/AccountBoxTwoTone';
 import LockOpenTwoToneIcon from '@mui/icons-material/LockOpenTwoTone';
 import AccountTreeTwoToneIcon from '@mui/icons-material/AccountTreeTwoTone';
 
 const UserBoxButton = styled(Button)(
   ({ theme }) => `
-    padding: ${theme.spacing(0, 0.5)};
-    height: ${theme.spacing(6)};
+    padding: ${theme.spacing(0.2, 0.2)};  
+    min-width: 0;
+    &:hover{
+      
+    }
 `
 );
 
@@ -60,7 +62,6 @@ function HeaderUserbox() {
   const location = useLocation();
   const navigate = useNavigate();
 
-
   const ref = useRef(null);
   const [isOpen, setOpen] = useState(false);
 
@@ -92,31 +93,6 @@ function HeaderUserbox() {
     <>
       <UserBoxButton color="secondary" ref={ref} onClick={handleOpen}>
         <Avatar variant="rounded" alt={user.name} src={user.avatar} />
-        <Box
-          component="span"
-          sx={{
-            display: { xs: 'none', md: 'inline-block' }
-          }}
-        >
-          <UserBoxText>
-            <UserBoxLabel variant="body1">{user.name}</UserBoxLabel>
-            <UserBoxDescription variant="body2">
-              {user.jobtitle}
-            </UserBoxDescription>
-          </UserBoxText>
-        </Box>
-        <Box
-          component="span"
-          sx={{
-            display: { xs: 'none', sm: 'inline-block' }
-          }}
-        >
-          <ExpandMoreTwoToneIcon
-            sx={{
-              ml: 1
-            }}
-          />
-        </Box>
       </UserBoxButton>
       <Popover
         disableScrollLock
