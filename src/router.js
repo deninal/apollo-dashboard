@@ -83,29 +83,7 @@ const StatusMaintenance = Loader(
 );
 
 const routes = [
-  // Boxed Sidebar Layout
-  // {
-  //   path: 'dashboards',
-  //   element: <BoxedBoxedSidebarLayout />,
-  //   children: [
-  //     {
-  //       path: '/',
-  //       element: <Navigate to="/dashboards/crypto" replace />
-  //     },
-  //     {
-  //       path: 'crypto',
-  //       element: <Crypto />
-  //     },
-  //     {
-  //       path: 'analytics',
-  //       element: <Analytics />
-  //     },
-  //     {
-  //       path: 'messenger',
-  //       element: <Messenger />
-  //     }
-  //   ]
-  // },
+
 
   {
     path: '*',
@@ -152,7 +130,7 @@ const routes = [
   },
   {
     path: 'dashboards',
-    element: <BoxedSidebarLayout />,
+    element: <SidebarLayout />,
     children: [
       {
         path: '/',
@@ -174,7 +152,7 @@ const routes = [
   },
   {
     path: 'management',
-    element: <BoxedSidebarLayout />,
+    element: <SidebarLayout />,
     children: [
       {
         path: '/',
@@ -206,7 +184,7 @@ const routes = [
   },
   {
     path: 'components',
-    element: <BoxedSidebarLayout />,
+    element: <SidebarLayout />,
     children: [
       {
         path: '/',
